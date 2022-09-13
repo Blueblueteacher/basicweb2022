@@ -13,5 +13,5 @@ temps = soup.find('div','temperature_text')
 summary = soup.find('p','summary')
 print(temps)
 print("제주시 노형동 "+temps.text.strip())
-# print(summary)
+
 print(summary.text.strip())
