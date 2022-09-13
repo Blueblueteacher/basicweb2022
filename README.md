@@ -1,3 +1,2 @@
-# basicweb2022
-
-## basicweb
+# Commit 정리
+:one: 2022-09-13 [콜로키움 멘토링] 날씨 정보 크롤링
