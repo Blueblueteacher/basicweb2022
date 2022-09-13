@@ -1,4 +1,3 @@
-import datetime
 import urllib
 from bs4 import BeautifulSoup
 import urllib.request as req
