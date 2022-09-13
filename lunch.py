@@ -66,9 +66,9 @@ for i in meal.values():
     print(i, end = "\n", file = out)
 out.close()
 
-file = open("bob.txt", "r")
+file = open("bob.txt", "r") # 파일을 읽어오기
 data = file.read()
 file.close()
 
-tts = gTTS(text=data, lang="ko")
+tts = gTTS(text=data, lang="ko") # 음성 파일로 변환
 tts.save("bob.wav")
