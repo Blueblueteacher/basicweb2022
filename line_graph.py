@@ -1,3 +1,4 @@
+'''
 #%%
 from numpy.random import randn 
 import matplotlib.pyplot as plt
@@ -19,4 +20,25 @@ ax1.set_title('Line plots: Markers, Colors, Linestyles')
 plt.xlabel('Draw')
 plt.ylabel('Random number')
 plt.legend(loc='best')
+'''
+# %%
+from numpy.random import randn 
+import matplotlib.pyplot as plt
+# Data part
+customers =['yuki','moon','seo','mini','hyunju'] # x축
+customers_index = range(len(customers))  # 1,2,3,4,5
+sale_amounts =[56,23,18,34,23] # y축의 값
+
+# 기본 그래프 구성
+fig = plt.figure()  
+ax1 = fig.add_subplot(1,1,1)
+ax1.bar (customers_index, sale_amounts, align='center', color='darkblue') 
+ax1.xaxis.set_ticks_position('bottom') # 밑에 customer name
+ax1.yaxis.set_ticks_position('left') # 왼쪽에 sale amount
+
+# 그래프 꾸미기
+plt.xticks(customers_index, customers, rotation=0, fontsize='small')
+plt.xlabel('Customer name')
+plt.ylabel('Sale amount')
+plt.title('Sale Amount per Customer')
 # %%
