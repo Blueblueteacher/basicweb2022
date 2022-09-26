@@ -32,7 +32,7 @@
                     else {
                         alert('올바르지 않은 단어입니다!');
                     }
-                    $input.value ='';
+                    $input.value =''; // input 태그 값 지우기
                     $input.focus();
             };
             const onInput = (event) => {
@@ -41,9 +41,6 @@
 
             $button.addEventListener('click', onClickButton);
             $input.addEventListener('input', onInput);
-            //console.log('number', number);
-            //const $order = document.querySelector('#order');
-            //console.log($order);
         </script>
     </body>
 </html>
