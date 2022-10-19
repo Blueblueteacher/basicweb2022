@@ -51,12 +51,34 @@
         }
         let intervalId = setInterval(changeComputerHand, 50);
 
+        const scoreTable = {
+          rock: 0,
+          scissors: 1,
+          paper: -1,
+        }; // 가위바위보 규칙 적용
+
         let clickable = true;
         const clickButton = () => {
           if (clickable) {
             clearInterval(intervalId);
             clickable = false;
             // 점수 계산 및 화면 표시
+            const myChoice = event.target.textContent === '바위'
+              ? 'rock'
+              : event.target.textContent === '가위'
+                ? 'scissors'
+                : 'paper'
+            
+            const myScore = scoreTable[myChoice];
+            const computerScore = scoreTable[computerChoice];
+            const diff = myScore - computerScore;
+            if (diff === 2 || diff === -1) { // 이기면
+              console.log('승리');
+            } else if (diff === -2) { // 지면
+              console.log('패배');
+            } else {
+              console.log('무승부');
+            }
             setTimeout(() => {
               clickable = true;
               intervalId = setInterval(changeComputerHand, 50);
