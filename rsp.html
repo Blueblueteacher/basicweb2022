@@ -58,6 +58,7 @@
         }; // 가위바위보 규칙 적용
 
         let clickable = true;
+        let score = 0;
         const clickButton = () => {
           if (clickable) {
             clearInterval(intervalId);
@@ -72,13 +73,17 @@
             const myScore = scoreTable[myChoice];
             const computerScore = scoreTable[computerChoice];
             const diff = myScore - computerScore;
-            if (diff === 2 || diff === -1) { // 이기면
-              console.log('승리');
-            } else if (diff === -2) { // 지면
-              console.log('패배');
+            let message;
+            if ([2, -1].includes(diff)) { // 이기면
+              scoer += 1;
+              message = '승리'
+            } else if ([-2, 1].includes(diff)) { // 지면
+              score -= 1;
+              message = '패배'
             } else {
-              console.log('무승부');
+              message = '무승부'
             }
+            $score.textContent = `${message} 총 : ${score}점`;
             setTimeout(() => {
               clickable = true;
               intervalId = setInterval(changeComputerHand, 50);
