@@ -3,7 +3,7 @@
 #include<stdio.h>
 
 int main() 
-{
+{   
     int a, b, c, n; // 시작 값 : a, 곱할 값 : b. 더할 값 : c. 항 : n
     int answer; // 값을 저장할 변수
     scanf("%d %d %d %d", &a, &b, &c, &n); 
@@ -16,8 +16,8 @@ int main()
     return 0;
 }
 */
-// 1273 약수 구하기
-#include<stdio.h>
+// 1273 ��� ���� �� 
+#include <stdio.h>
 
 int main() 
 {
